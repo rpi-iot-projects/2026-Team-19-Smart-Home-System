@@ -34,6 +34,60 @@ All code written in Python3. In addition to standard Python libraries, ble_inter
 
 ### Hardware Setup
 
+![hardware connections](./hardware_setup.png)
+
+#### Pinout Information
+- RasPi 1 (Hub):
+    - Camera = camera ribbon slot
+
+    - Motion sensor:
+        - VCC = 5V
+        - OUT = pin 7
+        - GND = GND
+
+    - Light sensor:
+        - VCC = 3.3V
+        - GND = GND
+        - SDA = physical pin 3
+        - SCL = physical pin 5
+        - ADDR =  no connection
+
+    - Curtain motor:
+        - Signal = physical pin 37
+        - VCC = 5V
+        - GND = GND
+
+    - ZigBee receiver:
+        - Port 0
+
+
+- Ras Pi 2 (Peripheral):
+    - Ranger:
+        - VCC = 5V
+        - GND = GND
+        - TRIG = pin 7
+        - ECHO = voltage divider (with physical pin 11 and 1k + 2k ohm resistors)
+
+
+    - Temp sensor:
+        - VCC = 3.3V
+        - DATA = pin 13
+        - GND = GND
+
+    - Light sensor:
+        - VCC = 3.3V
+        - GND = GND
+        - SDA = pin 3
+        - SCL = pin 5
+        - ADDR = no connection
+
+    - Motor:
+        - Signal = pin 15
+        - VCC = 5V
+        - GND = GND
+
+    - Zigbees:
+        - All ports (any order)
 
 
 ### Software Setup
